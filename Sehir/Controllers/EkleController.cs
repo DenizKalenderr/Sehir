@@ -42,7 +42,7 @@ namespace Sehir.Controllers
             string yol = "~/Image/" + dosyaadı + uzantı;
             Request.Files[0].SaveAs(Server.MapPath(yol));
             b.resim = "/Image/" + dosyaadı + uzantı;
-          
+            c.Users.Add(b);
             c.SaveChanges();
 
             return RedirectToAction("AdminList", "Ekle");
